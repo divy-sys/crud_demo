@@ -1,4 +1,4 @@
-class PersonsController < ApplicationController 
+class PeopleController < ApplicationController 
   before_action :find_person, only: [:show, :edit, :update, :destroy]
   def index
     @persons = Person.all
@@ -14,7 +14,7 @@ class PersonsController < ApplicationController
   def create
     @person = Person.new(person_params)
     @person.save 
-    redirect_to persons_path
+    redirect_to people_path
   end
 
   def edit 
@@ -23,12 +23,12 @@ class PersonsController < ApplicationController
 
   def update
     @person.update(person_params) 
-    redirect_to persons_path
+    redirect_to people_path
   end
   
   def destroy
     @person.destroy
-    redirect_to persons_path
+    redirect_to people_path
   end
 
   private

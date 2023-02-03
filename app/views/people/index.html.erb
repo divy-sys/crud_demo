@@ -1,0 +1,13 @@
+<h1>Persons Information </h1>
+<%= link_to "Create New Person", new_person_path %>
+<% @persons.each do |person| %>
+
+<p>Name: <%= person.name %> 
+<p>Name: <%= person.age %> 
+<p>Name: <%= person.address %> 
+<%= link_to "Show", person_path(person)  %> 
+<%= link_to "Edit", edit_person_path(person) %>
+<%= link_to "delete", person_path(person) , data: {turbo_method: :delete, turbo_confirm: "Are you sure want to delete ?"} %>
+<% end %>
+
+
