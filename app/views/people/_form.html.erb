@@ -1,0 +1,14 @@
+<%= form_with(model: @person) do |person| %>
+
+  <h3>Name </h3>
+  <p><%= person.text_field :name %></p>
+
+  <h3>Age</h3>
+  <p><%= person.text_field :age  %></p>
+
+  <h3>address</h3>
+  <p><%= person.text_field :address  %></p>
+  
+  <p><%= person.submit  %> </p>
+
+<% end %>
